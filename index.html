@@ -1,3 +1,4 @@
+
 <html>
     
     <head>
@@ -37,3 +38,44 @@
 
 <div id="content_2" class="tabcontent" style="display:none;">
     <p><b><center><font size=6>About Me</font></center></b></p>
+    <br>
+    <br> I am the most amazing computer science student ever. 
+</div>
+
+
+<!--<My Portfolio Section>!-->
+
+<div id="content_3" class="tabcontent" style="display:none;">
+    <p>my work</p>
+    <center>I will post applets from snap here!</center>
+</div>
+
+
+<!--<My Career Section>!-->
+
+<div id="content_4" class="tabcontent" style="display:none;">
+    <p>This section will be saved for a later date in the second semester.</p>
+</body>
+
+<script>
+    function switchTab(tab_id, tab_content) {
+    // first of all we get all tab content blocks (I think the best way to get them by class names)
+    var x = document.getElementsByClassName("tabcontent");
+    var i;
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none'; // hide all tab content
+    }
+    document.getElementById(tab_content).style.display = 'block'; // display the content of the tab we need
+    
+    // now we get all tab menu items by class names (use the next code only if you need to highlight current tab)
+    var x = document.getElementsByClassName("tabmenu");
+    var i;
+    for (i = 0; i < x.length; i++) {
+    x[i].className = 'tabmenu'; 
+    }
+    document.getElementById(tab_id).className = 'tm_active';
+    }
+</script>
+
+
+</html>
